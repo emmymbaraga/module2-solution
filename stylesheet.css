@@ -1,1 +1,100 @@
-
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+.wrapper {
+    padding: 5px;
+    max-width: 960px;
+    width: 95%;
+    margin: 10px auto;
+    border: 3px solid black;
+}
+header {
+    padding: 0 15px;
+    text-align: center;
+    font-size: 21px;
+}
+.heading1,.heading2,.heading3{
+    width: 90px;
+    height: 50px;
+    text-align: right;
+    padding:0;
+    border: 3px solid black;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+.heading1{
+    background-color: indianred;
+}
+.heading2{
+    background-color: darkred;
+}
+.heading3{
+    background-color: peachpuff;
+}
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin:  5px 0;   
+}
+.column {
+    flex: 1;
+    border: 3px solid black;
+    margin: 2px;
+    padding: 10px;
+    background: grey;
+    transition: 0.3s;
+    position: relative;
+    padding-top: 5px;
+}
+.column p {
+  padding: 0%;
+}
+.column:first-child {
+    margin-left: 0;
+    background: grey;
+}
+.column:last-child {
+    margin-left: 0;
+    background: grey;
+}
+.footer {
+    width: 943px;
+    background-color: grey;
+    padding: 0;
+    border: 10px solid rgb(100, 98, 98);
+    margin: 0;
+}
+@media (min-width: 767px)and (max-width: 991px) {
+    .columns .column {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+    }
+    .columns .column:last-child {
+        margin: 10px;
+        flex-basis: 100%;
+    }
+    .columns .column:nth-child(2){
+        margin-right: 0;
+       
+    }
+    .footer {
+        width: auto;
+    }
+}
+  
+@media (max-width: 991px) {
+     .columns .column{
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+    .footer {
+        width: auto;
+    }
+}
